@@ -1,0 +1,51 @@
+[package]
+name = "r3viewer"
+version = "0.1.0"
+description = "Student Project Review System"
+authors = ["r3viewer team"]
+license = "MIT"
+repository = "https://github.com/r3viewer/r3viewer"
+edition = "2021"
+
+[lib]
+name = "tauri_app_lib"
+crate-type = ["lib", "cdylib", "staticlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.0", features = [] }
+
+[dependencies]
+tauri = { version = "2.0", features = [ "image-ico", "image-png"] }
+tauri-plugin-shell = "2.0"
+tauri-plugin-dialog = "2.0"
+tauri-plugin-fs = "2.0"
+tauri-plugin-http = "2.0"
+tauri-plugin-os = "2.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["full"] }
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "sqlite", "chrono", "uuid"] }
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.0", features = ["v4", "serde"] }
+reqwest = { version = "0.11", features = ["json", "cookies"] }
+bollard = "0.15"  # Docker API client
+anyhow = "1.0"
+thiserror = "1.0"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+base64 = "0.21"
+url = "2.0"
+oauth2 = "4.0"
+rand = "0.8"
+sha2 = "0.10"
+keyring = "2.0"  # Secure credential storage
+git2 = "0.18"    # Git operations
+octocrab = "0.32"  # GitHub API client
+google-sheets4 = "5.0"  # Google Sheets API
+google-oauth = "1.0"
+hyper = "0.14"
+hyper-rustls = "0.24"
+futures = "0.3"
+regex = "1.0"
+walkdir = "2.0"
+
